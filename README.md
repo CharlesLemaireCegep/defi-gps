@@ -3,7 +3,7 @@ Avec mon addiction sévère aux événements C#,, voici mon implémentation des 
 mon implémentation permet de facilement ajouter et de connecter des modules/systèmes externes au système GPS. J'ai décidé de prendre l'approche du contrôleur, qui relie les différentes composantes d'un système et agit en tant que porte d'entrée d'un système.
 1 Émétteur -> Controlleur -> N receveurs 
 
-[Utilisation du système GPS] (Defi_GPS/Programme. c)
+[Utilisation du système GPS] (Defi_GPS/Program.cs)
 
 #### Avantages
 - Facilité d'implémentation
