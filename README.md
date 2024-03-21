@@ -18,6 +18,3 @@ mon implémentation permet de facilement ajouter et de connecter des modules/sys
 - GPSData doit contenir les informations du système le plus complexe 
   - Les champs non utilisés par un émetteur plus primitif seront nuls, donc doivent être gérés par des récepteurs avancés
   - Un récepteur plus primitif recevra des données inutiles (meh)
-
-
-![image](https://github.com/CharlesLemaireCegep/defi-gps/assets/125312759/fdb33a85-edec-4fff-824b-88889db39092)
