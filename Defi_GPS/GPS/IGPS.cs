@@ -2,12 +2,8 @@
 
 namespace Defi_GPS.GPS
 {
-    public interface IGPS
+    public interface IGPS : IPowerable, IConnectable<GPSData>
     {
-        public void PowerOn();
-        public void PowerOff();
-
-        public void Connect(Action<GPSData> action);
-        public void Disconnect(Action<GPSData> action);
+        // GPS only things here
     }
 }

@@ -1,10 +1,9 @@
-﻿using System.Numerics;
-using System.Timers;
+﻿using System.Timers;
 using Defi_GPS.General;
 
 namespace Defi_GPS.GPS
 {
-    public abstract class BaseGPS : IGPS, IModule
+    public abstract class BaseGPS : IGPS
     {
         protected System.Timers.Timer timer = new System.Timers.Timer();
         protected Action<GPSData>? OnUpdate;
@@ -15,14 +14,14 @@ namespace Defi_GPS.GPS
             timer.Elapsed += TimerUpdate;
         }
 
-        public void Connect(Action<GPSData> action)
+        public void Connect(IDataListener<GPSData> action)
         {
-            OnUpdate += action;
+            OnUpdate += action.Update;
         }
 
-        public void Disconnect(Action<GPSData> action)
+        public void Disconnect(IDataListener<GPSData> action)
         {
-            OnUpdate -= action;
+            OnUpdate -= action.Update;
         }
 
         public void PowerOn()

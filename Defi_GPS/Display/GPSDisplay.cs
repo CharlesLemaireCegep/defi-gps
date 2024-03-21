@@ -4,7 +4,7 @@ namespace Defi_GPS.Display
 {
     public class GPSDisplay : BaseGPSDisplay
     {
-        public override void UpdateDisplay(GPSData data)
+        public override void Update(GPSData data)
         {
             if (!isPoweredOn)
                 return;

@@ -1,13 +1,8 @@
 ﻿using Defi_GPS.General;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Defi_GPS.Display
 {
-    public abstract class BaseGPSDisplay : IGPSDisplay, IModule
+    public abstract class BaseGPSDisplay : IGPSDisplay
     {
         protected bool isPoweredOn = false;
 
@@ -21,6 +16,6 @@ namespace Defi_GPS.Display
             isPoweredOn = false;
         }
 
-        public abstract void UpdateDisplay(GPSData data);
+        public abstract void Update(GPSData data);
     }
 }

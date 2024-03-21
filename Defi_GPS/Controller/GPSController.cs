@@ -1,77 +1,75 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Defi_GPS.Display;
+﻿using Defi_GPS.Display;
 using Defi_GPS.General;
 using Defi_GPS.GPS;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Defi_GPS.Controller
 {
-    internal class GPSController
+    internal class GPSController : IPowerable, IDataListener<GPSData>
     {
-        IGPS? gpsModule;
-        List<BaseGPSDisplay> gpsDisplays = new List<BaseGPSDisplay>(); // list of displays to update
+        protected bool isPoweredOn = false;
+
+        Action<GPSData>? OnUpdate;
+        Action? OnPowerOn;
+        Action? OnPowerOff;
 
         // GPS System
         public void ConnectGPS(IGPS gps)
         {
-            // if there is a current GPS, disconnect it before connecting the other one
-            if (gpsModule != null)
-                DisconnectGPS(gpsModule);
-
-            gpsModule = gps;
-            gpsModule.Connect(Update);
+            gps.Connect(this);
+            OnPowerOn += gps.PowerOn;
+            OnPowerOff += gps.PowerOff;
         }
 
         public void DisconnectGPS(IGPS gps)
         {
-            if (gpsModule == null)
-                return;
-
-            gpsModule.Disconnect(Update);
-            gpsModule = null;
+            gps.Disconnect(this);
+            OnPowerOn -= gps.PowerOn;
+            OnPowerOff -= gps.PowerOff;
         }
 
         // GPS Display
-        public void ConnectGPSDisplay(BaseGPSDisplay display)
+        public void ConnectGPSDisplay(IGPSDisplay display)
         {
-            if (!gpsDisplays.Contains(display))
-                gpsDisplays.Add(display);
+            OnUpdate += display.Update;
+            OnPowerOn += display.PowerOn;
+            OnPowerOff += display.PowerOff;
         }
 
-        public void DisconnectGPSDisplay(BaseGPSDisplay display)
+        public void DisconnectGPSDisplay(IGPSDisplay display)
         {
-            if (gpsDisplays.Contains(display))
-                gpsDisplays.Remove(display);
+            OnUpdate += display.Update;
+            OnPowerOn += display.PowerOn;
+            OnPowerOff += display.PowerOff;
+        }
+
+        public void ConnectListener(IDataListener<GPSData> listener)
+        {
+            OnUpdate += listener.Update;
+        }
+
+        public void DisconnectListener(IDataListener<GPSData> listener)
+        {
+            OnUpdate -= listener.Update;
         }
 
         public void PowerOn()
         {
-            gpsModule?.PowerOn();
-            foreach (var display in gpsDisplays)
-            {
-                display.PowerOn();
-            }
+            isPoweredOn = true;
+            OnPowerOn?.Invoke();
         }
 
         public void PowerOff()
         {
-            gpsModule?.PowerOff();
-            foreach (var display in gpsDisplays)
-            {
-                display.PowerOff();
-            }
+            isPoweredOn = false;
+            OnPowerOff?.Invoke();
         }
 
         public void Update(GPSData data)
         {
-            foreach (var display in gpsDisplays)
-            {
-                display.UpdateDisplay(data);
-            }
+            if (!isPoweredOn)
+                return;
+
+            OnUpdate?.Invoke(data);
         }
     }
 }

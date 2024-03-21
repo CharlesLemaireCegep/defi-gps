@@ -9,7 +9,7 @@ namespace Defi_GPS.Display
 {
     internal class AdvGPSDisplay : BaseGPSDisplay
     {
-        public override void UpdateDisplay(GPSData data)
+        public override void Update(GPSData data)
         {
             if (!isPoweredOn)
                 return;

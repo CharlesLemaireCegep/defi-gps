@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Defi_GPS.General
 {
-    public interface IModule
+    public interface IPowerable
     {
         public void PowerOn();
         public void PowerOff();
