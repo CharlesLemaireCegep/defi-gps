@@ -15,8 +15,8 @@ namespace Defi_GPS.GPS
         {
             GPSData data = new GPSData()
             {
-                posX = 0,
-                posY = 0,
+                posX = 1,
+                posY = 2,
             };
 
             OnUpdate?.Invoke(data);

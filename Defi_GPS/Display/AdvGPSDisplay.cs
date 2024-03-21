@@ -13,11 +13,7 @@ namespace Defi_GPS.Display
         {
             if (!isPoweredOn)
                 return;
-
-            Console.WriteLine("========= GPS DISPLAY 9000 =========");
-            Console.WriteLine($"GPS Position [X:{data.posX}, Y:{data.posX}, Z:{data.posZ}]");
-            Console.WriteLine($"GPS Rotation [X:{data.rotX}, Y:{data.rotY}, Z:{data.rotZ}]");
-            Console.WriteLine("=======================================");
+            Console.WriteLine($"Advanced Display:   [X:{data.posX}, Y:{data.posY}, Z:{data.posZ}] [X:{data.rotX}, Y:{data.rotY}, Z:{data.rotZ}]");
         }
     }
 }

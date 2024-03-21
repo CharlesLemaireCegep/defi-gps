@@ -9,9 +9,7 @@ namespace Defi_GPS.Display
             if (!isPoweredOn)
                 return;
 
-            Console.WriteLine("========= GPS DISPLAY 3000 =========");
-            Console.WriteLine($"GPS Position [X:{data.posX}, Y:{data.posX}]");
-            Console.WriteLine("=======================================");
+            Console.WriteLine($"Simple Display:     [X:{data.posX}, Y:{data.posY}]");
         }
     }
 }

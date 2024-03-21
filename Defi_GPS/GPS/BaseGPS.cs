@@ -35,7 +35,6 @@ namespace Defi_GPS.GPS
         public void PowerOff()
         {
             timer.Stop();
-            OnUpdate = null;
         }
 
         protected abstract void TimerUpdate(object? sender, ElapsedEventArgs e);
