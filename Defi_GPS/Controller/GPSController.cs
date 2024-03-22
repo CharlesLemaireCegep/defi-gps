@@ -4,11 +4,11 @@ using Defi_GPS.GPS;
 
 namespace Defi_GPS.Controller
 {
-    internal class GPSController : IPowerable, IDataListener<GPSData>, IConnectable<GPSData>
+    internal class GPSController : IPowerable, IDataListener, IConnectable
     {
         protected bool isPoweredOn = false;
 
-        Action<GPSData>? OnUpdate;
+        Action<DataDict>? OnUpdate;
         Action? OnPowerOn;
         Action? OnPowerOff;
 
@@ -42,12 +42,12 @@ namespace Defi_GPS.Controller
             OnPowerOff -= display.PowerOff;
         }
 
-        public void Connect(IDataListener<GPSData> listener)
+        public void Connect(IDataListener listener)
         {
             OnUpdate += listener.Update;
         }
 
-        public void Disconnect(IDataListener<GPSData> listener)
+        public void Disconnect(IDataListener listener)
         {
             OnUpdate -= listener.Update;
         }
@@ -70,7 +70,7 @@ namespace Defi_GPS.Controller
             PowerOn();
         }
 
-        public void Update(GPSData data)
+        public void Update(DataDict data)
         {
             if (!isPoweredOn)
                 return;

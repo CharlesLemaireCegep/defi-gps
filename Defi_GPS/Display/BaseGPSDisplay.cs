@@ -16,6 +16,6 @@ namespace Defi_GPS.Display
             isPoweredOn = false;
         }
 
-        public abstract void Update(GPSData data);
+        public abstract void Update(DataDict data);
     }
 }

@@ -2,8 +2,9 @@
 
 namespace Defi_GPS.Display
 {
-    public interface IGPSDisplay : IDataListener<GPSData>, IPowerable
+    public interface IGPSDisplay : IDataListener, IPowerable
     {
+
         // GPS Display only things here
     }
 }

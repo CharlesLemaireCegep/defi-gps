@@ -1,6 +1,4 @@
-﻿
-using System.Numerics;
-using System.Timers;
+﻿using System.Timers;
 using Defi_GPS.General;
 
 namespace Defi_GPS.GPS
@@ -13,14 +11,14 @@ namespace Defi_GPS.GPS
 
         protected override void TimerUpdate(object? sender, ElapsedEventArgs e)
         {
-            GPSData data = new GPSData()
+            var data = new DataDict
             {
-                posX = 1,
-                posY = 2,
-                posZ = 3,
-                rotX = 4,
-                rotY = 5,
-                rotZ = 6
+                { GPSDataKeys.POS_X, 1 },
+                { GPSDataKeys.POS_Y, 2 },
+                { GPSDataKeys.POS_Z, 3 },
+                { GPSDataKeys.ROT_X, 4 },
+                { GPSDataKeys.ROT_Y, 5 },
+                { GPSDataKeys.ROT_Z, 6 },
             };
 
             OnUpdate?.Invoke(data);

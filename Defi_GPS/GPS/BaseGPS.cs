@@ -6,7 +6,7 @@ namespace Defi_GPS.GPS
     public abstract class BaseGPS : IGPS
     {
         protected System.Timers.Timer timer = new System.Timers.Timer();
-        protected Action<GPSData>? OnUpdate;
+        protected Action<DataDict>? OnUpdate;
 
         public BaseGPS(float updateIntervalMS)
         {
@@ -14,12 +14,12 @@ namespace Defi_GPS.GPS
             timer.Elapsed += TimerUpdate;
         }
 
-        public void Connect(IDataListener<GPSData> action)
+        public void Connect(IDataListener action)
         {
             OnUpdate += action.Update;
         }
 
-        public void Disconnect(IDataListener<GPSData> action)
+        public void Disconnect(IDataListener action)
         {
             OnUpdate -= action.Update;
         }

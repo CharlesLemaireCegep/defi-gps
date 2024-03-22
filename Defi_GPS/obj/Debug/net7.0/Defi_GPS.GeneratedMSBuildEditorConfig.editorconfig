@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Defi_GPS
-build_property.ProjectDir = C:\Users\Charley\source\repos\Defi_GPS\Defi_GPS\
+build_property.ProjectDir = C:\Users\Etudiant\Documents\GitHub\defi-gps\Defi_GPS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

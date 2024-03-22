@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "iZ6DEm1W5XppBAzsKt7iWZoTnTP+i6NBAD9SSln78cFQbJWJGVEZ4lXr/0gPrvuLFsUNZLCTc0q/Yu0WKpb8ww==",
+  "dgSpecHash": "77SZUK3rzp+tiOOH6z5n0t3Gghni5SUI/gtM+v5NcSLeYQHVcUcVgsmKU7surMM2qKKgmZQBdi+JByi2XBfmuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Charley\\source\\repos\\Defi_GPS\\Defi_GPS\\Defi_GPS.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Etudiant\\Documents\\GitHub\\defi-gps\\Defi_GPS\\Defi_GPS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Etudiant\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Etudiant\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Etudiant\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Etudiant\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.17\\microsoft.netcore.app.host.win-x64.7.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -9,11 +9,48 @@ namespace Defi_GPS.Display
 {
     internal class AdvGPSDisplay : BaseGPSDisplay
     {
-        public override void Update(GPSData data)
+        public override void Update(DataDict data)
         {
             if (!isPoweredOn)
                 return;
-            Console.WriteLine($"Advanced Display:   [X:{data.posX}, Y:{data.posY}, Z:{data.posZ}] [X:{data.rotX}, Y:{data.rotY}, Z:{data.rotZ}]");
+
+            StringBuilder dataString = new StringBuilder();
+            dataString.Append("Advanced Display: [");
+
+            // Positions
+            if (data.TryGetVal(GPSDataKeys.POS_X, out int posX))
+            {
+                dataString.Append($"PX: {posX}, ");
+            }
+
+            if (data.TryGetVal(GPSDataKeys.POS_Y, out int posY))
+            {
+                dataString.Append($"PY: {posY}, ");
+            }
+
+            if (data.TryGetVal(GPSDataKeys.POS_Z, out int posZ))
+            {
+                dataString.Append($"PZ: {posZ}");
+            }
+
+            // rotations
+            if (data.TryGetVal(GPSDataKeys.ROT_X, out int rotX))
+            {
+                dataString.Append($"RX: {rotX}, ");
+            }
+
+            if (data.TryGetVal(GPSDataKeys.ROT_Y, out int rotY))
+            {
+                dataString.Append($"RY: {rotY}, ");
+            }
+
+            if (data.TryGetVal(GPSDataKeys.ROT_Z, out int rotZ))
+            {
+                dataString.Append($"RZ: {rotZ}");
+            }
+
+            dataString.Append("]");
+            Console.WriteLine(dataString.ToString());
         }
     }
 }

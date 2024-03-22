@@ -13,10 +13,10 @@ namespace Defi_GPS.GPS
 
         protected override void TimerUpdate(object? sender, ElapsedEventArgs e)
         {
-            GPSData data = new GPSData()
+            var data = new DataDict
             {
-                posX = 1,
-                posY = 2,
+                { GPSDataKeys.POS_X, 0 },
+                { GPSDataKeys.POS_Y, 0 }
             };
 
             OnUpdate?.Invoke(data);

@@ -1,7 +1,7 @@
 ﻿namespace Defi_GPS.General
 {
-    public interface IDataListener<T>
+    public interface IDataListener
     {
-        public void Update(T data);
+        public void Update(DataDict data);
     }
 }

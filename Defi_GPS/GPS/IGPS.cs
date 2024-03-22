@@ -2,7 +2,7 @@
 
 namespace Defi_GPS.GPS
 {
-    public interface IGPS : IPowerable, IConnectable<GPSData>
+    public interface IGPS : IPowerable, IConnectable
     {
         // GPS only things here
     }
