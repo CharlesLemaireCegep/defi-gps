@@ -16,9 +16,9 @@ namespace Defi_GPS.GPS
                 { GPSDataKeys.POS_X, 1 },
                 { GPSDataKeys.POS_Y, 2 },
                 { GPSDataKeys.POS_Z, 3 },
-                { GPSDataKeys.ROT_X, 4 },
-                { GPSDataKeys.ROT_Y, 5 },
-                { GPSDataKeys.ROT_Z, 6 },
+                { GPSDataKeys.ROT_X, 11.11f },
+                { GPSDataKeys.ROT_Y, 22.22f },
+                { GPSDataKeys.ROT_Z, 33.33f },
             };
 
             OnUpdate?.Invoke(data);

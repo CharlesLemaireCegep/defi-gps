@@ -5,14 +5,13 @@
         public bool TryGetVal<T>(string key, out T? value)
         {
             bool res = TryGetValue(key, out object? objVal);
-
             if (objVal is T TValue)
             {
                 value = TValue;
             }
             else
             {
-                value = default; // will be null
+                value = default; // null or default value
             }
 
             return res;

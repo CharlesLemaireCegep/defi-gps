@@ -34,17 +34,17 @@ namespace Defi_GPS.Display
             }
 
             // rotations
-            if (data.TryGetVal(GPSDataKeys.ROT_X, out int rotX))
+            if (data.TryGetVal(GPSDataKeys.ROT_X, out float rotX))
             {
                 dataString.Append($"RX: {rotX}, ");
             }
 
-            if (data.TryGetVal(GPSDataKeys.ROT_Y, out int rotY))
+            if (data.TryGetVal(GPSDataKeys.ROT_Y, out float rotY))
             {
                 dataString.Append($"RY: {rotY}, ");
             }
 
-            if (data.TryGetVal(GPSDataKeys.ROT_Z, out int rotZ))
+            if (data.TryGetVal(GPSDataKeys.ROT_Z, out float rotZ))
             {
                 dataString.Append($"RZ: {rotZ}");
             }
