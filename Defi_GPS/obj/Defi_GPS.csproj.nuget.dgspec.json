@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Etudiant\\Documents\\GitHub\\defi-gps\\Defi_GPS\\Defi_GPS.csproj": {}
+    "C:\\Users\\Charley\\source\\repos\\Defi_GPS\\Defi_GPS\\Defi_GPS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Etudiant\\Documents\\GitHub\\defi-gps\\Defi_GPS\\Defi_GPS.csproj": {
+    "C:\\Users\\Charley\\source\\repos\\Defi_GPS\\Defi_GPS\\Defi_GPS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Etudiant\\Documents\\GitHub\\defi-gps\\Defi_GPS\\Defi_GPS.csproj",
+        "projectUniqueName": "C:\\Users\\Charley\\source\\repos\\Defi_GPS\\Defi_GPS\\Defi_GPS.csproj",
         "projectName": "Defi_GPS",
-        "projectPath": "C:\\Users\\Etudiant\\Documents\\GitHub\\defi-gps\\Defi_GPS\\Defi_GPS.csproj",
-        "packagesPath": "C:\\Users\\Etudiant\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Etudiant\\Documents\\GitHub\\defi-gps\\Defi_GPS\\obj\\",
+        "projectPath": "C:\\Users\\Charley\\source\\repos\\Defi_GPS\\Defi_GPS\\Defi_GPS.csproj",
+        "packagesPath": "C:\\Users\\Charley\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Charley\\source\\repos\\Defi_GPS\\Defi_GPS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Etudiant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charley\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -60,30 +55,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
